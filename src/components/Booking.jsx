@@ -295,7 +295,7 @@ const Location = () => {
 const SuccessFully = () => {
   return (
     <Card>
-      <CardImg src={'./check-gif.gif'} height={'250'}></CardImg>
+      <CardImg src={'./check-gif.gif'} height={'200'}></CardImg>
       <Card.Body>
         <h2 className="text-center">Submitted Your Application</h2>
         <span className="text-center">
@@ -361,7 +361,7 @@ const FormFooter = ({ Key, setKey, setPval }) => {
   const handlereset = () => {
     handleNext();
     handlesubmit();
-    setTimeout(() => setKey('Service Details'), 15000);
+    setTimeout(() => setKey('Service Details'), 5000);
   };
   return (
     <>
