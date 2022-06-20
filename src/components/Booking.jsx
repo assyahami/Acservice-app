@@ -359,8 +359,9 @@ const FormFooter = ({ Key, setKey, setPval }) => {
     }
   };
   const handlereset = () => {
-    setTimeout(() => setKey('Service Details'), 2000);
+    handleNext();
     handlesubmit();
+    setTimeout(() => setKey('Service Details'), 15000);
   };
   return (
     <>
