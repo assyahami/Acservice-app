@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardImg, Stack, Spinner } from 'react-bootstrap';
+import { Card, CardImg, Stack, Spinner, Placeholder } from 'react-bootstrap';
 import Rating from 'react-star-rating-component';
 
 import Slider from 'react-slick';
 import sanityclient from '../Client';
 function ReviewsSection() {
-  const [loading, setLoading] = useState(false);
   const [Reviewcontent, setReviewcontent] = useState([]);
   let settings = {
     dots: true,
@@ -45,7 +44,6 @@ function ReviewsSection() {
     ],
   };
   useEffect(() => {
-    setLoading(true);
     sanityclient
       .fetch(
         `*[_type=="UserTestimonals"]{_id,UserName,rating,UserReview,Userimage{
@@ -57,49 +55,58 @@ function ReviewsSection() {
       )
       .then((data) => setReviewcontent(data))
       .catch((err) => console.log(err));
-    setLoading(false);
   }, []);
-  if (loading) {
+  if (Reviewcontent.length == 0) {
     return (
-      <Stack className="w-100 d-flex justify-content-center h-100">
-        <Spinner animation="grow" />
-      </Stack>
+      <Placeholder
+        id="loader"
+        as={Stack}
+        xs={12}
+        size={'lg'}
+        animation="grow"
+        className="w-100 d-flex justify-content-center h-100"
+      ></Placeholder>
     );
   }
   return (
-    <Stack
-      id="reviews"
-      className="w-100 animate__animated animate__bounce animate__delay-1s animate__fadeInUp"
-    >
-      <Slider {...settings}>
-        {Reviewcontent.map((item, index) => {
-          return (
-            <Stack id={'reviewcard'} key={item._id}>
-              <Card className="d-flex card justify-content-center align-items-center">
-                <CardImg
-                  variant={'center'}
-                  src={`${item.Userimage.asset.url}`}
-                  alt="loading...."
-                ></CardImg>
-                <Card.Title className="text-center mt-3">
-                  {item.UserName}
-                </Card.Title>
-                <Rating
-                  name="rating"
-                  starCount={10}
-                  editing={false}
-                  value={parseInt(item.rating)}
-                  emptyStarColor={'#fff'}
-                />
-                <Card.Body>
-                  <Card.Text>{item.UserReview}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Stack>
-          );
-        })}
-      </Slider>
-    </Stack>
+    <>
+      <h2 className="text-center fw-bolder mb-5" id="headertext">
+        User Testimonials
+      </h2>
+      <Stack
+        id="reviews"
+        className="w-100 animate__animated animate__bounce animate__delay-1s animate__fadeInUp"
+      >
+        <Slider {...settings}>
+          {Reviewcontent.map((item, index) => {
+            return (
+              <Stack id={'reviewcard'} key={item._id}>
+                <Card className="d-flex card justify-content-center align-items-center">
+                  <CardImg
+                    variant={'center'}
+                    src={`${item.Userimage.asset.url}`}
+                    alt="loading...."
+                  ></CardImg>
+                  <Card.Title className="text-center mt-3">
+                    {item.UserName}
+                  </Card.Title>
+                  <Rating
+                    name="rating"
+                    starCount={10}
+                    editing={false}
+                    value={parseInt(item.rating)}
+                    emptyStarColor={'#fff'}
+                  />
+                  <Card.Body>
+                    <Card.Text>{item.UserReview}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Stack>
+            );
+          })}
+        </Slider>
+      </Stack>
+    </>
   );
 }
 

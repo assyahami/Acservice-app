@@ -41,7 +41,7 @@ function Footer() {
         </div>
         <div className="d-flex justify-content-around align-items-center flex-wrap duties">
           <div className="">
-            <span className="ms-4 service">Other Service</span>
+            <span className="service">Other Service</span>
             <ul>
               {[
                 'Plumbing',
@@ -55,7 +55,7 @@ function Footer() {
             </ul>
           </div>
           <div className="">
-            <span className="ms-4  service">Our Service</span>
+            <span className="ms-3 service">Our Service</span>
 
             <ul>
               <li>Ac Fixng</li>

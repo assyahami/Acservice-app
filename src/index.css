@@ -94,8 +94,8 @@ color: #2c4272;
   transition: 0.5s ease-in-out all;
 }
 .overlay{
-  width: 100vw !important;
-    height: 100vw !important;
+  width: 100% !important;
+    height: 100% !important;
     background: linear-gradient(to right bottom ,hsl(0, 0%, 0%), rgba(51, 51, 51, 0.306));
     position: absolute;
     top: 0%;
@@ -258,9 +258,7 @@ padding: 1.5rem;
 .nav a:hover{
       transform: scale(1);
 }
-#carousel img ,.overlay{
-height: 110vw !important;
-}
+
 .carocaption{
 top: 28%;
 }
@@ -273,7 +271,7 @@ top: 28%;
 .carocaption h1{
 font-size:1.5rem;
 }
-.carocaption h2 {
+.carocaption h2 h4{
   font-size: 1rem !important;
 
 }
@@ -335,23 +333,29 @@ font-family: sans-serif;
   flex-direction: row !important;
 }
 }
+#loader{
+  width: 100vw  !important;
+  height: 100vw  !important;
+background: #bfbfbf;
+}
 @media screen and (max-width:450px) {
 body{
   width:100% !important;
 }
-  #carousel img ,.overlay{
-height: 110vw !important;
-}
-/* #carousel{
-  width: 50vw !important;
 
-} */
+
+#carousel{
+margin-top: 1.5rem;
+}
 .carcaption{
 font-size: 0.5rem !important;
 }
+.carcaption h1 h4{
+font-size: 1rem !important;
+}
 .carocaption{
 top: 20%;
-  /* width: fit-content !important; */
+  width: 100%;
 left: 0;
 }
 .active {
@@ -363,7 +367,7 @@ left: 0;
 .subintro .card{
   margin: 0.5rem;
 }
-.carocaption h1{
+.carocaption h1  h4{
 font-size:1rem !important;
 }
 #modal-content {
@@ -377,6 +381,7 @@ width: 100%;
 }
 #progresstimeline {
   top: 12.5rem;
+  width:80% !important;
 }
 
 #reviewcard .card p{

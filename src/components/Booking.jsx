@@ -18,7 +18,7 @@ import {
   ProgressBar,
 } from 'react-bootstrap';
 import { Formcontext, useGlobalcontext } from '../context/formcontext';
-const JuctionBookComponent = ({show,setShow}) => {
+const JuctionBookComponent = ({ show, setShow }) => {
   return (
     <Formcontext>
       <Header show={show} setShow={setShow} />
@@ -103,11 +103,12 @@ function Booking() {
 }
 
 const Services = () => {
-  const { Cleaningweek, btnval, setBtnval, setCleaningweek } = useGlobalcontext();
+  const { Cleaningweek, btnval, setBtnval, setCleaningweek } =
+    useGlobalcontext();
   const handleform = (event) => {
     setCleaningweek(event.target.value);
   };
-  
+
   return (
     <div className="m-3 ">
       <Form>
@@ -122,7 +123,7 @@ const Services = () => {
                   key={index}
                   onClick={(e) => setBtnval({ ...btnval, btnval1: item })}
                   variant={`${
-                    item === btnval.btnval1 ? 'secondary' : 'outline-secondary'
+                    item == btnval.btnval1 ? 'secondary' : 'outline-secondary'
                   }`}
                 >
                   {item}
@@ -170,7 +171,7 @@ const Services = () => {
                     id="group1"
                     type={'radio'}
                     value={item.text}
-                    onChange={e=>e}
+                    onChange={(e) => e}
                     checked={Cleaningweek === item.text}
                     className="form-control-check"
                   ></input>
@@ -306,7 +307,7 @@ const SuccessFully = () => {
 };
 
 const FormFooter = ({ Key, setKey, setPval }) => {
-  const { formdb, setFormdb,handlesubmit } = useGlobalcontext();
+  const { formdb, setFormdb, handlesubmit } = useGlobalcontext();
 
   const handlecheck = () => {
     if (Key === 'Service Details') {
@@ -356,36 +357,32 @@ const FormFooter = ({ Key, setKey, setPval }) => {
     if (Key === 'location') {
       return setKey('Submiited Application');
     }
-    
   };
-  const handlereset=()=>{
-    setTimeout(() => setKey('Service Details'),2000);
-   handlesubmit()
-  }
+  const handlereset = () => {
+    setTimeout(() => setKey('Service Details'), 2000);
+    handlesubmit();
+  };
   return (
     <>
       <Navbar fixed={'bottom'} className="shadow" id="navbar">
-        <Container className="d-flex justify-content-center gap-3 align-items-center">
-         
+        <Container className="d-flex justify-content-center  align-items-center">
           {Key === 'location' ? (
             <Button
               onClick={() => handlereset()}
               variant={'primary'}
-              className="w-25  fw-bold"
+              className="w-50  fw-bold"
             >
               Submit
-            </Button>)
-          :
-           (
+            </Button>
+          ) : (
             <Button
               onClick={() => handlecheck()}
               variant={'info'}
-              className="w-25  fw-bold"
+              className="w-50  fw-bold"
             >
-              Next <FaArrowRight/>
+              Next <FaArrowRight />
             </Button>
-          )
-        }
+          )}
         </Container>
       </Navbar>
     </>

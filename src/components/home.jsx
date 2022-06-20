@@ -19,9 +19,7 @@ const Home = ({ show, setShow }) => {
           <Timelineads />
         </article>
         <article>
-          <h2 className="text-center fw-bolder mb-5" id="headertext">
-            User Testimonials
-          </h2>{' '}
+          
           <Review />1
         </article>
       </main>
