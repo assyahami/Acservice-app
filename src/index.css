@@ -1,13 +1,442 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+#navbar{
+background-color: #eaefef;
+/* position: fixed;
+bottom: 50%; */
+}
+.nav a{
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.carocaption{
+  position: absolute !important;
+  /* left: 0 !important; */
+  top: 48%;
+  font-size: smaller;
+ font-family: monospace;
+  padding: 1.5rem;
+}
+.carocaption h2{
+  font-family: 'Times New Roman', Times, serif;
+color: #2c4272;
+  font-size: 1.5rem !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+#headertext{
+  color: #2c4272;
+  font-size: 1.8rem !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+.brand{
+  color: #2c4272;
+  font-size: 2rem !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+.nav a{
+  color: #333 !important;
+  font-weight: 500;
+  font-family: monospace;
+  
+}
+.subintro{
+  color: #333 !important;
+    font-weight: 500;
+    padding: 1rem;
+    font-family: monospace;
+    background-color: #f0f0f0;
+}
+.vertical-timeline::before{
+  background: rgb(136, 205, 205) !important;
+}
+.subintro .card{
+  background:#b1ffff;
+  border:none ;
+  border-radius: 5% 5%;
+  border-left: 5px solid #29a5a5;
+}
+.subintro .card-text{
+  color:#29a5a5 ;
+  font-size: 1rem;
+}
+#carousel{
+  margin-top: 2.5rem;
+}
+#carousel img{
+  width: 100vw !important;
+  height: 80vh !important;
+ background-color: #333;
+ background-blend-mode: multiply;
+}
+#specialbtn{
+ border-radius: 2.5rem;
+ color: #333;
+ font-weight: 700;
+ padding: 0.5rem;
+ border: 2px solid #333;
+ background: transparent;
+}
+#specialbtn1{
+ border-radius: 2.5rem;
+ color: #fff;
+ font-weight: 700;
+ padding: 0.5rem;
+ margin-top: 1rem;
+ border: 2px solid #fff;
+ background: transparent;
+}
+#specialbtn:hover,#specialbtn1:hover{
+  color: #ffff;
+  background-color: #333;
+  border: 2px solid #fff;
+  transition: 0.5s ease-in-out all;
+}
+.overlay{
+  width: 100vw !important;
+    height: 100vw !important;
+    background: linear-gradient(to right bottom ,hsl(0, 0%, 0%), rgba(51, 51, 51, 0.306));
+    position: absolute;
+    top: 0%;
+    /* z-index: 9999; */
+    tab-size: 10ch;
+}
+.nav a:hover, .end li:hover{
+  background: hwb(70 22% 73% / 0.12) !important;
+  transform: scale(1.2);
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s ease-in-out all;
+}
+.subintro .card:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s steps(15) all;
+}
+.activelink{
+  text-decoration: underline;
+    background: hwb(70 22% 73% / 0.12) !important;
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out all;
+}
+#cardimg{
+  width: 100%;
+  height: 40vw !important;
+  /* object-fit: cover; */
+}
+#card{
+  width: 70%;
+}
+#formbtn{
+border-radius: 40%;
+}
+ .nav-tabs{
+  flex-wrap: nowrap !important;
+ }
+ .nav-tabs li{
+list-style: none;
+
+background-color:#bad0ff ;
+border-radius: 100%;
+border-left: 3px solid #333 !important;
+  z-index: 999;
+  border:2px solid skyblue !important ;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#modal-content{
+  width: 100vw !important;
+}
+.active{
+border-radius: 100% !important;
+}
+#progresstimeline{
+  width: 75% !important;
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  background:skyblue ;
+}
+.tab-content>.active{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.tab-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#reviews{
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-image: url('../public/reviewbg.jpg');
+  background-color: rgba(51, 51, 51, 0.706);
+  background-repeat: no-repeat;
+  padding: 2.5rem;
+  transition: 0.5s all ease-in-out;
+  color: #ffff;
+}
+#reviewcard .card p{
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: start;
+}
+#reviewcard .card{
+  height: 30rem;
+  width: 20rem;
+  background-color: rgba(51, 51, 51, 0.706);
+  color: #ffff;
+  border-radius: 10%;
+}
+#reviewcard img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  margin-top: 1.5rem;
+}
+.footer{
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+background-color: rgb(225, 220, 220);
+padding: 1.5rem;
+}
+.footer  li{
+  list-style-type: circle; 
+  margin-top: 1rem;
+}
+.footer .end li{
+  list-style-type: none; 
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  border-radius: 100%;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0;
+}
+
+
+#finaltext{
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: 400;
+  line-height: 3.5rem;
+}
+.customer h4 ,.service,.end h6,.end li,.bookingtile{
+  font-size: 1rem;
+  font-family: monospace;
+  font-weight: 800;
+  color: #2c4272;
+  line-height:2.5rem;
+}
+.footerone
+{
+  width: 50% !important;
+}
+.end{
+  font-weight: 800;
+}
+@media screen and (max-width:786px) {
+  .nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+.activelink {
+      transform: scale(1);
+}
+.nav a:hover{
+      transform: scale(1);
+}
+#carousel img ,.overlay{
+height: 110vw !important;
+}
+.carocaption{
+top: 28%;
+}
+.subintro .row{
+  padding: 1.5rem;
+}
+.subintro .card{
+  margin: 0.5rem;
+}
+.carocaption h1{
+font-size:1.5rem;
+}
+.carocaption h2 {
+  font-size: 1rem !important;
+
+}
+#modal-content {
+  width: 100% !important;
+}
+
+#card {
+width: 100%;
+}
+.nav-tabs {
+   flex-direction: row !important;
+}
+#progresstimeline {
+  top: 12.5rem;
+}
+#reviewcard .card {
+  height: 30rem;
+  width: 22rem;
+}
+#reviewcard .card p{
+font-size: medium;
+font-family: sans-serif;
+}
+#reviewcard img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  margin-top: 1.5rem;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 100% !important;
+  height: fit-content;
+  flex-basis: 50%;
+}
+#finaltext {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 100%;
+}
+.footerone,.end{
+  width: 100% !important;
+}
+.end{
+  flex-direction: column !important;
+  font-weight: 800;
+  
+}
+.end .list{
+  display: flex !important;
+  flex-direction: row !important;
+}
+}
+@media screen and (max-width:450px) {
+body{
+  width:100% !important;
+}
+  #carousel img ,.overlay{
+height: 110vw !important;
+}
+/* #carousel{
+  width: 50vw !important;
+
+} */
+.carcaption{
+font-size: 0.5rem !important;
+}
+.carocaption{
+top: 20%;
+  /* width: fit-content !important; */
+left: 0;
+}
+.active {
+  border-radius: 100% !important;
+}
+.subintro .row{
+  padding: 1.5rem;
+}
+.subintro .card{
+  margin: 0.5rem;
+}
+.carocaption h1{
+font-size:1rem !important;
+}
+#modal-content {
+  width: 100% !important;
+}
+#card {
+width: 100%;
+}
+.nav-tabs {
+   flex-direction: row !important;
+}
+#progresstimeline {
+  top: 12.5rem;
+}
+
+#reviewcard .card p{
+font-size: small;
+font-family: sans-serif;
+}
+#reviewcard img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-top: 0.5rem;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 100% !important;
+  height: fit-content;
+  flex-basis: 50%;
+}
+#finaltext {
+  font-size: 1rem;
+  font-family: monospace;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 100%;
+}
+.footerone,.end{
+  width: 100% !important;
+}
+.end{
+  flex-direction: column !important;
+  font-weight: 700;
+}
+.end .list{
+  display: flex !important;
+  flex-direction: row !important;
+}
+.duties{
+  margin-top: 1.5rem;
+flex-direction: row !important;
+flex-wrap: nowrap !important;
+align-items: flex-start !important;
+}
+.eLPooy{
+width:100vw;
+}
+#reviewcard .card {
+  height: 100% !important;
+  width: 100% !important;
+}
+#specialbtn1{
+font-weight: 500;
+border: 2px solid #fff;
+} 
+#specialbtn{
+font-weight: 500;
+border: 2px solid #333;
+}
 }
