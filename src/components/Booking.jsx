@@ -297,7 +297,7 @@ const SuccessFully = () => {
     <Card>
       <CardImg src={'./check-gif.gif'} height={'200'} width={'200'} alt="loading.." variant="top"></CardImg>
       <Card.Body>
-        <span className="text-center mb-4">
+        <span className="text-center mb-3">
           Witn in 24 Hours Cleaner with take charge in Your House
         </span>
       </Card.Body>
