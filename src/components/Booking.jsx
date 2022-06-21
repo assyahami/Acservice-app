@@ -295,9 +295,8 @@ const Location = () => {
 const SuccessFully = () => {
   return (
     <Card>
-      <CardImg src={'./check-gif.gif'} height={'200'}></CardImg>
+      <CardImg src={'./check-gif.gif'} height={'200'} width={'200'} alt="loading.." variant="top"></CardImg>
       <Card.Body>
-        <h2 className="text-center">Submitted Your Application</h2>
         <span className="text-center">
           Witn in 24 Hours Cleaner with take charge in Your House
         </span>
