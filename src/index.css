@@ -122,12 +122,12 @@ color: #2c4272;
     transition: 0.5s ease-in-out all;
 }
 #cardimg{
-  width: 50vw;
+  width: 35;
   height: 40vw !important;
   /* object-fit: cover; */
 }
 #card{
-  width: 70%;
+  width: 100%;
 }
 #formbtn{
 border-radius: 40%;
